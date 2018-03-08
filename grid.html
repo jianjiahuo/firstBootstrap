@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--响应式布局需要的元素-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .starter {
+            padding: 40px 15px;
+            text-align: center
+        }
+        .row{
+            margin-bottom: 20px;
+        }
+        .row .row {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        /* 通配选择器 */
+        [class*="col-md"]{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: #eee;
+            background-color: rgba(86,61,124,.15);
+            border: 1px solid #ddd;
+            border: 1px solid rgba(86,61,124,.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!--创建导航栏-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!--导航栏的头部-->
+            <div class="navbar-header">
+                <!--设置导航链接的样式-->
+                <a href="#" class="navbar-brand">Project Name</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <!-- 栅格系统必须使用container容器来承载 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+            <div class="col-md-1">col-md-1</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">col-md-3</div>
+            <div class="col-md-3">col-md-3</div>
+            <div class="col-md-3">col-md-3</div>
+            <div class="col-md-3">col-md-3</div>
+        </div>
+        <!-- 列的高度可以根据列中内容进行自适应高度 -->
+        <div class="row">
+            <div class="col-md-3">col-md-3col-md-3col-md-3col-md-3col-md-3col-md-3</div>
+            <div class="col-md-4">col-md-4col-md-4</div>
+            <div class="col-md-5">col-md-5</div>
+        </div>
+        <!-- 栅格的偏移 -->
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">col-md-6 col-md-offset-3</div>
+        </div>
+        <!-- 栅格的嵌套 -->
+        <div class="row">
+            <div class="col-md-9">
+                one
+                <div class="row">
+                    <div class="col-md-8">first</div>
+                    <div class="col-md-4">second</div>
+                </div>
+            </div>
+            <div class="col-md-3">two</div>
+        </div>
+        <!-- 交换栅格的位置 -->
+        <div class="row">
+            <div class="col-md-5 col-md-push-7">col-md-5 col-md-push-7</div>
+            <div class="col-md-7 col-md-pull-5">col-md-7 col-md-pull-5</div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-md-push-5">col-md-7 col-lg-push-5</div>
+            <div class="col-md-5 col-md-pull-7">col-md-5 col-md-pull-7</div>
+        </div>
+
+    </div>
+    <div class="table-responsive">
+        <!-- table-striped斑马线的表格 table-hover鼠标悬停的表格 table-condensed紧凑型表格-->
+        <!-- 状态类 active success info warning danger用于向表格添加颜色 -->
+        <table class="table  table-bordered">
+            <!-- <caption>bootstrap中的table</caption> -->
+            <thead>
+                <tr>
+                    <th>标题1</th>
+                    <th>标题2</th>
+                    <th>标题3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                </tr>
+                <tr class="success">
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                </tr>
+                <tr class="info">
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                </tr>
+                <tr class="danger">
+                    <td>单元格1</td>
+                    <td>单元格2</td>
+                    <td>单元格3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 内联表单：form-inline，表单宽度自适应auto，768宽度以上可使用最大宽度 -->
+    <div class="container">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <!-- label标签必须要添加，否则屏幕阅读器无法读出输入框中要输入的内容，客隐藏不显示出来 -->
+                <label class="sr-only">日期</label>
+                <input type="date" class="form-control" placeholder="choosedate">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">username</label>
+                <input type="text" class="form-control" placeholder="username">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">password</label>
+                <input type="password" class="form-control" placeholder="password">
+            </div>
+            <div class="form-group">
+                <label class="sr-only">choosefile</label>
+                <input type="file" >
+                <p class="help-block">please choose your file!</p>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <!-- 创建水平表单 -->
+        <!-- multiple可选项全部显示出来 disabled禁用 readonly只读状态 -->
+        <fieldset>
+            <legend>Bootstrap Form</legend>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">User Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" placeholder="User Name" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-5">
+                        <input type="Password" class="form-control" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-5">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <p class="form-control-static">请按照我的格式输入:hello@163.com</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Photo</label>
+                    <div class="col-sm-5">
+                        <input type="file">
+                        <p class="help-block">请选择您的照片！</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label ">Inroduction</label>
+                    <div class="col-sm-5">
+                        <textarea class="form-control" rows="5">Inroduce yourself</textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Sports</label>
+                    <div class="col-sm-5">
+                        <div class="checkbox">
+                            <label class="control-label">
+                                <input type="checkbox" value="篮球">篮球
+                            </label>
+                            <label class="control-label">
+                                <input type="checkbox" value="乒乓">乒乓
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Sex</label>
+                    <div class="col-sm-5">
+                        <div class="radio" >
+                            <label class="control-label" >
+                                <input type="radio" value="男" name="sexRadio" checked>男
+                            </label>
+                            <label class="control-label">
+                                <input type="radio" value="女" name="sexRadio">女
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Coruses</label>
+                    <div class="col-sm-5">
+                        <select class="form-control">
+                            <option>Bootstrap</option>
+                            <option>HTML</option>
+                            <option>CSS</option>
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="form-group has-success has-feedback">
+                    <label class="col-sm-2 control-label ">FromStatus:has-success</label>
+                    <div class="col-sm-5">
+                    <input type="text" class="form-control">
+                    <span class="glyphicon glyphicon-ok form-control-feedback" ></span>
+                    </div>
+                </div>
+                <div class="form-group has-warning has-feedback">
+                    <label class="col-sm-2 control-label  ">FromStatus:has-warning</label>
+                    <div class="col-sm-5 ">
+                        <input type="text" class="form-control">
+                        <span class="glyphicon glyphicon-warning-sign form-control-feedback" ></span>
+                    </div>
+                </div>
+                <div class="form-group has-error has-feedback">
+                    <label class="col-sm-2 control-label  ">FromStatus:has-error</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control">
+                        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-5 col-sm-offset-2">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">记住密码
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5 col-sm-offset-2">
+                        <button type="submit" class="btn btn-default">登录</button>
+                    </div>
+                </div>
+    
+            </form>
+        </fieldset>
+
+    </div>
+</body>
+
+</html>
